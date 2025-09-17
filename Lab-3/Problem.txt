@@ -1,0 +1,10 @@
+Tasks for today:
+
+Task 1:
+Scan two variables a and b. Print the value of their GCD.
+
+Task 2:
+Scan a variable x. Print if it is prime or not.
+
+Task 3:
+Scan three variables a, b, and c. Print the value of the maximum of the three numbers.
