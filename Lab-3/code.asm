@@ -62,3 +62,9 @@ main:
         mov rsi, rax
         xor rax, rax
         call printf
+
+
+    pop rbp         ; restore the old base pointer
+    mov rax, 60     ; syscall: exit
+    xor rdi, rdi    ; status: 0
+    syscall
