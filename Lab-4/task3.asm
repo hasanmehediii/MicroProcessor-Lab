@@ -2,37 +2,54 @@ extern printf
 extern scanf
 
 SECTION .data
-    in_fmt: db "%ld",0
-    out_fmt: db "%ld",10,0
+    in_fmt     db "%ld", 0
+    out_fmt    db "%ld", 10, 0
 
 SECTION .bss
-    n: resq 1
+    n      resq 1
+    i      resq 1
 
 SECTION .text
     global main
+
 main:
-    mov rdi,in_fmt
-    lea rsi,[n]
-    xor rax,rax
+    push rbp
+
+    ; Scan n
+    mov rdi, in_fmt
+    mov rsi, n
     call scanf
 
-    mov rbx,[n]
-    mov rcx,1
+    mov qword [i], 1
+
 .loop:
-    cmp rcx,rbx
-    jg .done
-    mov rax,rbx
-    xor rdx,rdx
-    div rcx
-    cmp rdx,0
+    mov rax, [i]
+    mov rbx, [n]
+    cmp rax, rbx
+    jg .end
+
+    ; Check if n % i == 0
+    mov rax, [n]
+    xor rdx, rdx
+    div qword [i]
+
+    cmp rdx, 0
     jne .skip
-    mov rdi,out_fmt
-    mov rsi,rcx
-    xor rax,rax
+
+    ; If divisible, print i
+    mov rdi, out_fmt
+    mov rsi, [i]
+    mov rax, 0
     call printf
+
 .skip:
-    inc rcx
+    ; i++
+    mov rax, [i]
+    add rax, 1
+    mov [i], rax
     jmp .loop
-.done:
-    mov rax,0
+
+.end:
+    pop rbp
+    mov rax, 0
     ret
