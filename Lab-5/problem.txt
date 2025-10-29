@@ -1,0 +1,1 @@
+Write an x86-64 assembly program using NASM syntax that determines whether an input string is a palindrome (reads the same forward and backward).
