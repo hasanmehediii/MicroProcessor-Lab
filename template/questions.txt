@@ -1,0 +1,30 @@
+1. Print "Hello, World!".
+2. Read a single character from input and print it back.
+3. Read two single-digit numbers, add them, and print the sum.
+4. Find the larger of two numbers.
+5. Find the smaller of two numbers.
+6. Find the largest number in an array.
+7. Find the smallest number in an array.
+8. Calculate the sum of elements in an array.
+9. Reverse a string.
+10. Check if a string is a palindrome.
+11. Calculate the factorial of a number.
+12. Generate the Fibonacci series up to N.
+13. Convert a lowercase letter to uppercase.
+14. Convert an uppercase letter to lowercase.
+15. Count the number of characters in a string.
+16. GCD of two numbers.
+17. LCM of two numbers.
+18. Simple calculator (add, sub, mul, div).
+19. Print the even numbers from 1 to N.
+20. Print the odd numbers from 1 to N.
+21. Check if a number is prime.
+22. Swap two numbers without using a third variable.
+23. Find the sum of the digits of a number.
+24. Convert a binary number to a decimal number.
+25. Convert a decimal number to a binary number.
+26. Check if a year is a leap year.
+27. Print a pattern (e.g., a triangle of stars).
+28. Search for a number in an array.
+29. Sort an array in ascending order (Bubble Sort).
+30. Sort an array in descending order (Bubble Sort).
