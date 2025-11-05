@@ -26,3 +26,4 @@ ld -m elf_i386 s1.o -o s1
 ```
 
 Replace `s1` with the corresponding solution number you want to run.
+nasm -f elf32 s1.asm -o s1.o && ld -m elf_i386 s1.o -o s1 && ./s1
